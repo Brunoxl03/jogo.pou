@@ -2,23 +2,26 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	Hamster Ratinho;
+	Lobo Lobão;
+	Raposa Fox;
+	Personagem atual;
+
 
 	public MainPage()
 	{
 		InitializeComponent();
+
+		imgpersonagem.source = "hamster.jpg";
+		Ratinho = new Hamster();
+		Lobão = new Lobo();
+		Fox = new Raposa();
+
+		atual = Ratinho;
+
+		imgpersonagem.source = atual.GetNomeDaFoto();
 	}
+	
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
 }
 
