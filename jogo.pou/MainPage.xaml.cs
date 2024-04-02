@@ -2,9 +2,9 @@
 
 public partial class MainPage : ContentPage
 {
-	Hamster Ratinho;
-	Lobo Lobão;
-	Raposa Fox;
+	hamster Ratinho;
+	lobo Lobão;
+	raposa Fox;
 	Personagem atual;
 
 
@@ -12,14 +12,14 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 
-		imgpersonagem.source = "hamster.jpg";
-		Ratinho = new Hamster();
-		Lobão = new Lobo();
-		Fox = new Raposa();
+		imgpersonagem.Source = "hamster.jpg";
+		Ratinho = new hamster();
+		Lobão = new lobo();
+		Fox = new raposa();
 
 		atual = Ratinho;
 
-		imgpersonagem.source = atual.GetNomeDaFoto();
+		imgpersonagem.Source = atual.GetNomeDaFoto();
 	}
 	
 

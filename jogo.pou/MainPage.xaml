@@ -5,6 +5,13 @@
              BackgroundColor="black">
 
     <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+
+
          <Image Source="hamster.jpg"/>
          <Image x:Name="imgpersonagem"/>
          <ProgressBar x:Name="prog"/>
