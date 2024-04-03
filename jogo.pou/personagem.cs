@@ -31,21 +31,21 @@ public class Personagem
     public void SetSede (double s)
     {
         if (s >= 0 && s <= 1)
-        fome = s;
+        sede = s;
         else if (s > 1)
-        fome = 1;
+        sede = 1;
         else if (s > 0)
-        fome = 0;
+        sede = 0;
     }
 
     public void SetEnergia (double e)
     {
         if (e >= 0 && e <= 1)
-        fome = e;
+        energia = e;
         else if (e > 1)
-        fome = 1;
+        energia = 1;
         else if (e > 0)
-        fome = 0;
+        energia = 0;
     }
     
 }
