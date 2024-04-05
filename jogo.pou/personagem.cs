@@ -13,7 +13,7 @@ public class Personagem
         fome = 0;
         sede = 0;
         energia = 0;
-        NomeDaFoto = "";
+        NomeDaFoto = "hamster.jpg";
     }
     public string GetNomeDaFoto()
     {

@@ -19,7 +19,9 @@ public partial class MainPage : ContentPage
 
 		atual = Ratinho;
 
- 		prog.Progress=0.5;
+ 		sede.Progress=0.5;
+		Fome.Progress=0.3;
+		energia.Progress=05;
 		imgpersonagem.Source = atual.GetNomeDaFoto();
 	}
 	

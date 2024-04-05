@@ -5,6 +5,8 @@
              Shell.NavBarIsVisible="false"
              BackgroundColor="black">
 
+
+
     <Grid>
 
 
@@ -22,8 +24,18 @@
 
              <Image Source="hamster.jpg"/>
              <Image x:Name="imgpersonagem"/>
-             <ProgressBar x:Name="prog"
-             Grid.Row="0"/>
+
+             <ProgressBar 
+                x:Name="sede"
+                Grid.Row="0"/>
+
+             <ProgressBar 
+                x:Name="fome"
+                Grid.Row="1"/>
+
+             <ProgressBar 
+                x:Name="energia"
+                Grid.Row="2"/>
 
      </Grid>
 
