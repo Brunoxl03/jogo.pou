@@ -1,12 +1,12 @@
 namespace jogo.pou;
-public class  hamster: Personagem
+public class  Hamster: Personagem
 
 {
-    public hamster() : base()
+    public Hamster() : base()
     {
         fome = 1;
         sede = 1;
-        energia = 1;
+        sono = 1;
         NomeDaFoto = "hamster.jpg";
     }
 }

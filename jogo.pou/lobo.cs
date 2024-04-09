@@ -1,12 +1,12 @@
 namespace jogo.pou;
-public class  lobo: Personagem
+public class  Lobo: Personagem
 
 {
-    public lobo() : base()
+    public Lobo() : base()
     {
         fome = 1;
         sede = 1;
-        energia = 1;
+        sono = 1;
         NomeDaFoto = "lobo.jpg";
     }
 }

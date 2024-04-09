@@ -1,12 +1,12 @@
 namespace jogo.pou;
-public class  raposa: Personagem
+public class  Raposa: Personagem
 
 {
-    public raposa() : base()
+    public Raposa() : base()
     {
         fome = 1;
         sede = 1;
-        energia = 1;
+        sono = 1;
         NomeDaFoto = "raposa.jpg";
     }
 }

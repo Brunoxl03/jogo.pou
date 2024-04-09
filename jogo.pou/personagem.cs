@@ -5,14 +5,14 @@ public class Personagem
 {
     public double fome;
     public double sede;
-    public double energia;
+    public double sono;
     public string NomeDaFoto;
 
     public Personagem()
     {
         fome = 0;
         sede = 0;
-        energia = 0;
+        sono = 0;
         NomeDaFoto = "hamster.jpg";
     }
     public string GetNomeDaFoto()
@@ -21,31 +21,33 @@ public class Personagem
     }
     public void SetFome (double f)
     {
-        if (f >= 0 && f <= 1)
-        fome = f;
-        else if (f > 1)
-        fome = 1;
-        else if (f > 0)
-        fome = 0;
+        fome=f;
+        if( Fome <= 0)
+
     }
+    public double GetFome()
+{
+    return Fome;
+}
+
     public void SetSede (double s)
     {
-        if (s >= 0 && s <= 1)
-        sede = s;
-        else if (s > 1)
-        sede = 1;
-        else if (s > 0)
-        sede = 0;
+       sede=S;
+       if(sede <= 0)
     }
-
-    public void SetEnergia (double e)
+     public double GetSede()
+{
+    return Sede;
+}
+    public void Setsono (double e)
     {
-        if (e >= 0 && e <= 1)
-        energia = e;
-        else if (e > 1)
-        energia = 1;
-        else if (e > 0)
-        energia = 0;
+        sono=S;
+        if(sono <= 0)
+       
     }
+     public double GetSono()
+{
+    return Sono;
+}
     
 }

@@ -6,37 +6,71 @@
              BackgroundColor="black">
 
 
-
     <Grid>
 
 
              <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="0"/>
-                <RowDefinition Height="0"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
              </Grid.RowDefinitions>
              <Grid.ColumnDefinitions>
-                <ColumnDefinition Widht="*"/>
-                <ColumnDefinition Widht="*"/>
-                <ColumnDefinition Widht="*"/>
-                <ColumnDefinition Widht="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
              </Grid.ColumnDefinitions>
 
-             <Image Source="hamster.jpg"/>
-             <Image x:Name="imgpersonagem"/>
+              <Image    Source="hamster.jpg"
+             x:Name="imgpersonagem"
+             Aspect="AspectFill"
+             Grid.Row="0"
+             Grid.RowSpan="3"
+             Grid.ColumnSpan="4"/>
+
+
+            <Frame x:Name="barras"
+                    Padding="8"
+                    BackgroundColor="#dcfce8"
+                    CornerRadius="30"
+                    Margin="10,20"
+                    HeightRequest="170"
+                    Grid.ColumnSpan="4"
+                    VerticalOptions="Start">
+
+            <Grid>
+
+             <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+             </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+               </Grid.ColumnDefinitions>
+
 
              <ProgressBar 
                 x:Name="sede"
-                Grid.Row="0"/>
+                Grid.ColumnSpan="3"
+                Grid.Row="0"
+                Grid.Column="1"/>
 
              <ProgressBar 
                 x:Name="fome"
-                Grid.Row="1"/>
+                Grid.ColumnSpan="3"
+                Grid.Row="1"
+                Grid.Column="1"/>
 
              <ProgressBar 
                 x:Name="energia"
-                Grid.Row="2"/>
+                Grid.ColumnSpan="3"
+                Grid.Row="2"
+                Grid.Column="1"/>
 
+            </Grid>
+          </Frame>
      </Grid>
 
 </ContentPage>
