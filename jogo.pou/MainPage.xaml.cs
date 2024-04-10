@@ -15,11 +15,32 @@ public partial class MainPage : ContentPage
 		imgpersonagem.Source = "hamster.jpg";
 
 		atual = Ratinho;
-
- 		ProgressoFome.Progress=atual.GetFome
+		fome.Progress=atual.GetFome();
+		sede.Progress=atual.GetSede();
+		sono.Progress=atual.GetSono();
 		imgpersonagem.Source = atual.GetNomeDaFoto();
 	}
-	
+	private void TrocaBixos(object sender, EventArgs args)
+	{
+	   if(atual == Ratinho)
+	   { 
+		  atual = Lobão;
+	   }
+	   else if(atual == Ratinho)
+	   { 
+		 atual = Lobão;
+	   }
+	   else 
+	   {
+		 atual = Fox;
+	   }
+	   imgpersonagem.Source = atual.GetNomeDaFoto();
+	   AtualizaPersonagem();
+	}
 
+    private void AtualizaPersonagem()
+    {
+
+    }
 }
 

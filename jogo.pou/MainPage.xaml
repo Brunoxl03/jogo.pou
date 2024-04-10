@@ -28,6 +28,16 @@
              Grid.RowSpan="3"
              Grid.ColumnSpan="4"/>
 
+             <Frame x:Name="botao"
+                    Padding="8"
+                    BackgroundColor="#dcfce8"
+                    CornerRadius="30"
+                    Margin="10,20"
+                    HeightRequest="170"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center">
+               </Frame>
+
 
             <Frame x:Name="barras"
                     Padding="8"
@@ -50,22 +60,38 @@
                 <ColumnDefinition Width="*"/>
                </Grid.ColumnDefinitions>
 
+           <ImageButton
+                     x:Name="semfundo"
+                     Source="semfundofome.png"
+                     Grid.Column="0"/>
+
+            <ImageButton
+               x:Name="semfund"
+               Source="semfundosede.png"
+               Grid.Row="1"
+               Grid.Column="0"/>
+
+               <ImageButton
+               x:Name="semfun"
+               Source="sono.png"
+               Grid.Row="2"
+               Grid.Column="0"/>
 
              <ProgressBar 
                 x:Name="sede"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="2"
                 Grid.Row="0"
                 Grid.Column="1"/>
 
              <ProgressBar 
                 x:Name="fome"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="2"
                 Grid.Row="1"
                 Grid.Column="1"/>
 
              <ProgressBar 
-                x:Name="energia"
-                Grid.ColumnSpan="3"
+                x:Name="sono"
+                Grid.ColumnSpan="2"
                 Grid.Row="2"
                 Grid.Column="1"/>
 
