@@ -2,19 +2,18 @@
 
 public partial class MainPage : ContentPage
 {
+	Personagem atual;
 	Hamster Ratinho = new Hamster();
 	Lobo Lobão = new Lobo();
 	Raposa Fox = new Raposa();
-	Personagem atual;
 
 
 	public MainPage()
 	{
 		InitializeComponent();
 
-		imgpersonagem.Source = "hamster.jpg";
-
 		atual = Ratinho;
+	
 		fome.Progress=atual.GetFome();
 		sede.Progress=atual.GetSede();
 		sono.Progress=atual.GetSono();
