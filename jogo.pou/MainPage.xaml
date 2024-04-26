@@ -55,13 +55,13 @@
                      Grid.Column="0"/>
 
             <ImageButton
-               x:Name="semfund"
+               x:Name="sedeimg"
                Source="semfundosede.png"
                Grid.Row="1"
                Grid.Column="0"/>
 
                <ImageButton
-               x:Name="semfun"
+               x:Name="sonoimg"
                Source="sono.png"
                Grid.Row="2"
                Grid.Column="0"/>

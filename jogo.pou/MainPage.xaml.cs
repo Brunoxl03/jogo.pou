@@ -1,4 +1,6 @@
-﻿namespace jogo.pou;
+﻿using Microsoft.Maui.Controls;
+
+namespace jogo.pou;
 
 public partial class MainPage : ContentPage
 {
@@ -35,11 +37,45 @@ public partial class MainPage : ContentPage
 	   }
 	   imgpersonagem.Source = atual.GetNomeDaFoto();
 	   AtualizaPersonagem();
+
+	   var timer = Application.Current.Dispatcher.CreateTimer();
+	   timer.Interval = TimeSpan.FromSeconds(1);
+	   timer.Tick += (s,e)=>
+	   PassouTempo();
+	   timer.Start();
 	}
 
-    private void AtualizaPersonagem()
+	void PassouTempo()
+	{
+		atual.Setsono(atual.GetSono() - 0.01);
+		AtualizaPersonagem();
+		atual.SetFome(atual.GetFome() - 0.01);
+		AtualizaPersonagem();
+		atual.SetSede(atual.GetSede() - 0.01);
+	}
+
+    void AtualizaPersonagem()
     {
+		Progressofome.progress = atual.GetFome();
+		Progressosono.progress = atual.GetSono();
+		progressosede.progress = atual.GetSede();
 
     }
+
+	  private void ProgressoTristeza(object sender, EventArgs args)
+   	{
+      	atual.SetSede(atual.GetSede() + 0.01);
+		AtualizaPersonagem();
+   	}
+   private void ProgressoFome(object sender, EventArgs args)
+   	{
+      	atual.SetFome(atual.GetFome() + 0.01);
+		AtualizaPersonagem();
+   	}
+   private void ProgressoConfusao(object sender, EventArgs args)
+   	{
+      	atual.Setsono(atual.GetSono() + 0.01);
+		AtualizaPersonagem();
+   	}
 }
 
